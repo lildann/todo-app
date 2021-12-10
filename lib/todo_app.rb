@@ -14,6 +14,14 @@ class TodoApp
     @todolist.map.with_index { |todo, index| puts "#{index + 1}" + " " + "#{todo}" }
   end
 
+  def done(todo_id)
+    @todolist.delete_at(todo_id.to_i - 1)
+    if @todolist.empty? 
+      puts "No items in the Todo List"
+    else 
+      @todolist.map.with_index { |todo, index| puts "#{index + 1}" + " " + "#{todo}" }
+    end
+  end
 
 
 end
