@@ -11,6 +11,9 @@ class TodoApp
 
   def add(todo)
     @todolist << todo
+    @todolist.map.with_index { |todo, index| puts "#{index + 1}" + " " + "#{todo}" }
   end
+
+
 
 end

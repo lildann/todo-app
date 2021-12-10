@@ -8,7 +8,10 @@ describe TodoApp do
 
   it 'should store todos in a list' do
     app = TodoApp.new
-    app.add("Pump bike tyres")
+    expect { app.add("Pump bike tyres") }.to output("1 Pump bike tyres\n").to_stdout
     expect(app.todolist).to include("Pump bike tyres")
+    
   end
+
+
 end
